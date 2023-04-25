@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  --Nier-Main-Title-Color:#49463E;
+  --Nier-Text-Shadow: #b4af9a;
+
+  --transition-color: 0.5s;
+}
+
+
+.nier-title{
+  @apply font-normal font-nier-header uppercase tracking-[2px] drop-shadow-[4px_4px_0_var(--Nier-Text-Shadow)] text-[var(--Nier-Main-Title-Color)];
+}
