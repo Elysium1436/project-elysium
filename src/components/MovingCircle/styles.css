@@ -1,0 +1,30 @@
+
+
+.moving-circle-animation{
+  will-change: transform;
+  animation: diagonal-movement 18s ease-in-out infinite; 
+  outline: 1px solid transparent;
+  backdrop-filter: 0.5px
+}
+
+
+.add-perspective{
+  perspective: 1px;
+}
+
+
+
+@keyframes diagonal-movement {
+  0%{
+    transform: translate(-1%, -1%)
+  }
+
+  50%{
+    transform: translate(1%,1%);
+  }
+
+  100%{
+    transform: translate(-1%, -1%)
+  }
+  
+}

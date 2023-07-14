@@ -1,0 +1,21 @@
+.outer-rotation{
+  position: absolute;
+  animation: outer-circle 15s ease-in-out infinite;
+}
+
+
+.inner-rotation{
+  animation: inner-circle 15s ease-in-out infinite;
+}
+
+@keyframes outer-circle{
+  from {transform:rotate(0deg) }
+  to {transform:rotate(360deg) }
+}
+
+
+
+@keyframes inner-circle{
+  from {transform:rotate(45deg) }
+  to {transform:rotate(-315deg) }
+}
