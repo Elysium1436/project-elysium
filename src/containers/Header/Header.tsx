@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import HeaderButton from './HeaderButton'
+import { BsHouse, IoNewspaperOutline, TiCogOutline, RiContactsBookLine } from "react-icons/all"
 
 function Header() {
 
@@ -11,11 +12,11 @@ function Header() {
   }
 
   return (
-    <div className="flex flex-row w-100 justify-around">
-      <HeaderButton faClass="fa-fan" name="Home" currentPage={currentPage} onHoverCallback={hoverCallback} />
-      <HeaderButton faClass="fa-fan" name="Home" currentPage={currentPage} onHoverCallback={hoverCallback} />
-      <HeaderButton faClass="fa-fan" name="Home" currentPage={currentPage} onHoverCallback={hoverCallback} />
-      <HeaderButton faClass="fa-fan" name="Home" currentPage={currentPage} onHoverCallback={hoverCallback} />
+    <div className="flex flex-row w-full  justify-center gap-x-[26px] pt-5 overflow-hidden min-w-full">
+      <HeaderButton iconComponent={<BsHouse />} name="Home" currentPage={currentPage} onHoverCallback={hoverCallback} />
+      <HeaderButton iconComponent={<IoNewspaperOutline />} name="About" currentPage={currentPage} onHoverCallback={hoverCallback} />
+      <HeaderButton iconComponent={<TiCogOutline />} name="Projects" currentPage={currentPage} onHoverCallback={hoverCallback} />
+      <HeaderButton iconComponent={<RiContactsBookLine />} name="Contact" currentPage={currentPage} onHoverCallback={hoverCallback} />
     </div>
   )
 }

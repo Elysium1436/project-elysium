@@ -4,10 +4,15 @@ export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
+      colors: {
+        'header-main-color': 'var(--Nier-Header-Main-Color)',
+        'header-secondary-color': 'var(--Nier-Header-Secondary-Color)',
+        'background-main-color': 'var(--Nier-Background-Main-Color)',
+        'background-shape-color': 'var(--Nier-Background-Shape-Color)'
+      },
       backgroundImage: {
-        'grid-lines': 'radial-gradient(circle at center, rgba(239, 234, 210,0.1) 2px, transparent 2px), radial-gradient(circle at center, rgba(239, 234, 210, 0.1) 1px, transparent 2px)',
-        'primary': 'var(--bg-primary)',
-        'secondary': 'var(--bg-scondary)'
+        'grid-lines': 'radial-gradient(circle at center, var(--Nier-Grid-Color) 2px, transparent 2px), radial-gradient(circle at center, var(--Nier-Grid-Color) 1px, transparent 2px)',
+        'tv-screen-filter': 'radial-gradient(ellipse 35% 80% at center, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.8) 220%)',
       },
       backgroundSize: {
         '50px': "10px 10px"
@@ -15,18 +20,9 @@ export default {
       backgroundPosition: {
         '25px': '25px 25px'
       },
-      backgroundColor: {
-        'nier-light': "#c3bea7",
-        'primary': 'var(--bg-primary)',
-        'secondary': 'var(--bg-scondary)'
-      },
-      textColor: {
-        'primary': 'var(--text-primary)',
-        'secondary': 'var(--text-secondary)',
-        'nier-light': "#c3bea7"
-      },
       fontFamily: {
-        'nier-header': ["Darker Grotesque", "sans-serif"]
+        'nier-header': ["Darker Grotesque", "sans-serif"],
+        'nier-header': ["FOT-Rodin Pro", "sans-serif"],
       },
       transitionProperty: {
         'width': 'width',

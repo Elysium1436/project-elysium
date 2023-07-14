@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque&display=swap');
+@import url('https://fonts.cdnfonts.com/css/fot-rodin-pro');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,8 +7,45 @@
 
 html, body, #root, #root>div {
   height: 100%;
-  --bg-primary: #fff;
-  --bg-secondary: #fff;
 }
 
 
+
+html {
+  --Nier-Main-Title-Color:#49463E;
+  --Nier-Text-Shadow: #b4af9a;
+  --Nier-Header-Main-Color: #B9B5A3;
+  --Nier-Header-Secondary-Color: #49463E;
+  --Nier-Background-Main-Color: #CDC8B0;
+  --Nier-Grid-Color: rgba(150, 147, 132, 0.1);
+  --Nier-Background-Shape-Color: #6A6556;
+
+  --Nier-Alert: #CD664D;
+  --transition-color: 0.5s;
+  --rotation-radius: 50px;
+}
+
+
+
+.dark {
+  --Nier-Main-Title-Color:#49463E;
+  --Nier-Text-Shadow: #b4af9a;
+  --Nier-Header-Main-Color: #49463E;
+  --Nier-Header-Secondary-Color: #9e9986;
+  --Nier-Background-Main-Color: #57544A;
+  --Nier-Grid-Color: rgba(168, 156, 127, 0.1);
+}
+
+svg {
+  stroke: currentColor;
+}
+
+
+.nier-title{
+  @apply font-normal font-nier-header uppercase tracking-[2px] drop-shadow-[4px_4px_0_var(--Nier-Text-Shadow)] text-[var(--Nier-Main-Title-Color)];
+}
+
+
+.tv-screen-filter {
+  @apply fixed top-0 left-0 w-full h-full bg-tv-screen-filter z-10 pointer-events-none;
+}
