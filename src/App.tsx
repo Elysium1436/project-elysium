@@ -1,16 +1,52 @@
-import Header from './containers/Header/Header'
-import BackgroundDecoration from './containers/BackgroundDecoration/BackgroundDecoration'
+import { BrowserRouter as Router, createBrowserRouter } from "react-router-dom";
+import Home from "./containers/Home/Home";
+import Skills from "./containers/Skills/Skills";
+import Projects from "./containers/Projects/Projects";
+import Contact from "./containers/Contact/Contact";
+import Root from "./Root";
+import Test from "./containers/Skills/Subskills";
+import Subskills from "./containers/Skills/Subskills";
+import SkillContent from "./containers/Skills/SkillContent";
+import ProjectDetail from "./containers/ProjectDetail/ProjectDetail";
 
-function App() {
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Root />,
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "projects",
+        element: <Projects />,
+        children: [
+          { path: ":skillName/:projectName", element: <ProjectDetail /> },
+        ],
+      },
+      {
+        path: "contact",
+        element: <Contact />,
+      },
+      {
+        path: "skills",
+        element: <Skills />,
+        children: [
+          {
+            path: ":skillName",
+            element: <Test />,
+            children: [
+              {
+                path: ":subskillName",
+                element: <SkillContent />,
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  },
+]);
 
-  return (
-    <div className="bg-grid-lines bg-50px bg-background-main-color overflow-visible">
-      <Header />
-      <div className="tv-screen-filter"></div>
-      <BackgroundDecoration linePosition="top" positionClasses="top-0 left-0 -translate-x-1/2 -translate-y-1/2" />
-      <BackgroundDecoration linePosition="bottom" positionClasses="bottom-0 right-0 translate-x-1/2 translate-y-1/2" />
-    </div>
-  )
-}
-
-export default App
+export default router;

@@ -1,25 +1,31 @@
-import { useState } from 'react'
-import HeaderButton from './HeaderButton'
-import { BsHouse, IoNewspaperOutline, TiCogOutline, RiContactsBookLine } from "react-icons/all"
+import HeaderButton from "./HeaderButton";
+import { BsHouse } from "react-icons/bs";
+import { IoNewspaperOutline } from "react-icons/io5";
+import { TiCogOutline } from "react-icons/ti";
+import { RiContactsBookLine } from "react-icons/ri";
+import LightDarkToggle from "src/containers/LightDarkToggle/LightDarkToggle";
 
 function Header() {
-
-  const [currentPage, changePage] = useState("Home")
-
-
-  function hoverCallback(headerButtonName: string) {
-    changePage(headerButtonName)
-  }
-
   return (
-    <div className="flex flex-row w-full  justify-center gap-x-[26px] pt-5 overflow-hidden min-w-full">
-      <HeaderButton iconComponent={<BsHouse />} name="Home" currentPage={currentPage} onHoverCallback={hoverCallback} />
-      <HeaderButton iconComponent={<IoNewspaperOutline />} name="About" currentPage={currentPage} onHoverCallback={hoverCallback} />
-      <HeaderButton iconComponent={<TiCogOutline />} name="Projects" currentPage={currentPage} onHoverCallback={hoverCallback} />
-      <HeaderButton iconComponent={<RiContactsBookLine />} name="Contact" currentPage={currentPage} onHoverCallback={hoverCallback} />
+    <div className="flex flex-row w-full justify-center items-center gap-x-[26px] overflow-hidden min-w-full h-[15vh]">
+      <HeaderButton iconComponent={<BsHouse />} name="Home" to="/" />
+      <HeaderButton
+        iconComponent={<IoNewspaperOutline />}
+        name="Skills"
+        to="/skills"
+      />
+      <HeaderButton
+        iconComponent={<TiCogOutline />}
+        name="Projects"
+        to="/projects"
+      />
+      <HeaderButton
+        iconComponent={<RiContactsBookLine />}
+        name="Contact"
+        to="/contact"
+      />
     </div>
-  )
+  );
 }
 
-
-export default Header
+export default Header;
