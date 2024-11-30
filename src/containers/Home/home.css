@@ -1,0 +1,17 @@
+.logo-svg {
+  animation: scaleWidth 5s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  display: block;
+  margin: 0 auto;
+}
+
+@keyframes scaleWidth {
+  0% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(-1);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}

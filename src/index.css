@@ -11,34 +11,34 @@
 
 @font-face {
   font-family: "FOT-Rodin Pro";
-  src: url("/public/fonts/FOT-Rodin\ Pro\ L.otf") format("opentype");
+  src: url("/fonts/FOT-Rodin\ Pro\ L.otf") format("opentype");
   font-style: normal;
   font-weight: 300; /* Specifies the range of weight the font supports */
 }
 
 @font-face {
   font-family: "FOT-Rodin Pro";
-  src: url("/public/fonts/FOT-Rodin\ Pro\ M.otf") format("opentype");
+  src: url("/fonts/FOT-Rodin\ Pro\ M.otf") format("opentype");
   font-style: normal;
   font-weight: 500; /* Specifies the range of weight the font supports */
 }
 
 @font-face {
   font-family: "FOT-Rodin Pro";
-  src: url("/public/fonts/FOT-Rodin\ Pro\ DB.otf") format("opentype");
+  src: url("/fonts/FOT-Rodin\ Pro\ DB.otf") format("opentype");
   font-style: normal;
   font-weight: 600; /* Specifies the range of weight the font supports */
 }
 
 @font-face {
   font-family: "FOT-Rodin Pro";
-  src: url("/public/fonts/FOT-Rodin\ Pro\ EB.otf") format("opentype");
+  src: url("/fonts/FOT-Rodin\ Pro\ EB.otf") format("opentype");
   font-style: normal;
   font-weight: 800; /* Specifies the range of weight the font supports */
 }
 @font-face {
   font-family: "FOT-Rodin Pro";
-  src: url("/public/fonts/FOT-Rodin\ Pro\ UB.otf") format("opentype");
+  src: url("/fonts/FOT-Rodin\ Pro\ UB.otf") format("opentype");
   font-style: normal;
   font-weight: 900; /* Specifies the range of weight the font supports */
 }
@@ -92,6 +92,10 @@ svg {
 
 .nier-dropshadow {
   @apply drop-shadow-[10px_10px_0_var(--Nier-Text-Shadow)];
+}
+
+.scrollbar-nier {
+  @apply overflow-auto scrollbar-thin scrollbar-thumb-nier-dark-700 scrollbar-track-transparent;
 }
 
 .fade-enter {

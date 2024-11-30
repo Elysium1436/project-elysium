@@ -1,11 +1,10 @@
-import { BrowserRouter as Router, createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
 import Home from "./containers/Home/Home";
 import Skills from "./containers/Skills/Skills";
 import Projects from "./containers/Projects/Projects";
 import Contact from "./containers/Contact/Contact";
 import Root from "./Root";
 import Test from "./containers/Skills/Subskills";
-import Subskills from "./containers/Skills/Subskills";
 import SkillContent from "./containers/Skills/SkillContent";
 import ProjectDetail from "./containers/ProjectDetail/ProjectDetail";
 

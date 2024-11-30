@@ -3,7 +3,6 @@ import { BsHouse } from "react-icons/bs";
 import { IoNewspaperOutline } from "react-icons/io5";
 import { TiCogOutline } from "react-icons/ti";
 import { RiContactsBookLine } from "react-icons/ri";
-import LightDarkToggle from "src/containers/LightDarkToggle/LightDarkToggle";
 
 function Header() {
   return (
